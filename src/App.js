@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Sidebar from './components/Sidebar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {Overview, Users, Revenue} from './pages/Overview';
+import {Reports, ReportsOne, ReportsTwo, ReportsThree} from './pages/Reports'
+import Products from './pages/Products';
+import Team from './pages/Team'
+import {Messages, MessagesOne, MessagesTwo, MessagesThree} from './pages/Messages'
+import Support from './pages/Support'
+
 
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Sidebar />
+      <Switch>
+        <Route path= "/overview" exact component= {Overview} />
+        <Route path= "/overview/users" exact component= {Users} />
+        <Route path= "/overview/revenue" exact component= {Revenue} />
+
+        <Route path= "/reports" exact component= {Reports} />
+        <Route path= "/reports/reports1" exact component= {ReportsOne} />
+        <Route path= "/reports/reports2" exact component= {ReportsTwo} />
+        <Route path= "/reports/reports3" exact component= {ReportsThree} />
+
+        <Route path= "/products" exact component= {Products} />
+
+        <Route path= "/team" exact component= {Team} />
+
+        <Route path= "/messages" exact component= {Messages} />
+        <Route path= "/messages/messages1" exact component= {MessagesOne} />
+        <Route path= "/messages/messages2" exact component= {MessagesTwo} />
+        <Route path= "/messages/messages3" exact component= {MessagesThree} />
+
+        <Route path= "/support" exact component= {Support} />
+
+      </Switch>
+    </Router>
   );
 }
 
