@@ -8,33 +8,35 @@ import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
 
 const Nav = styled.div`
-    background: #15171c;
+    //background: #000;// ==> linea superior
     height: 80px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    
 `;
 
 const NavIcon = styled(Link)`
     margin-left: 2rem;
     font-size: 2rem;
-    height: 80px;
+    height: 100px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 `;
 
-const SidebarNav = styled.nav `
-    background: #15171c;
+const SidebarNav = styled.nav ` //===>sidebar
+    background: #F8F8FF;
     width: 250px;
     height: 100vh;
     display: flex;
     justify-content: center;
     position: fixed;
     top: 0;
-    left: ${({sidebar})=> (sidebar ? '0' : '-100%')};
-    transition: 350ms;
+    //left: ${({sidebar})=> (sidebar ? '0' : '-100%')};
+    //transition: 350ms;
     z-index: 10;
+    box-shadow: 0 0 15px #DCDCDC;
     `;
 
 const SidebarWrap = styled.div`
@@ -43,36 +45,39 @@ const SidebarWrap = styled.div`
 
 const Sidebar = () => {
 
-    const [sidebar, setSidebar] = useState (false);
+    /* const [sidebar, setSidebar] = useState (false);
 
     const showSidebar = ()=> setSidebar(!sidebar)
+     */
     return (
     <>
-    <IconContext.Provider value= {{color: '#fff'}}>
+    <IconContext.Provider value= {{color: '#696969'}}>
     
-    <Nav>
+    {/* <Nav>    
 
         <NavIcon to="#">
             <FaIcons.FaBars onClick={showSidebar}/>
         </NavIcon>
 
-    </Nav>
+    </Nav> */}
 
-    <SidebarNav sidebar={sidebar}>
+    <SidebarNav >  {/*  sidebar={sidebar}>  */}
         <SidebarWrap>
 
         <NavIcon to="#">
-            <AiIcons.AiOutlineClose onClick={showSidebar}/>
+            {/* <AiIcons.AiOutlineClose onClick={showSidebar}/> ==>>> boton X*/}
         </NavIcon>
-
+               
+               
             {SidebarData.map((item, index)=> {
                 return <SubMenu item= {item} key={index} />;
             })}
 
         </SidebarWrap>
-    </SidebarNav>
-
+    
+    </ SidebarNav >
     </IconContext.Provider>
+    
     </> 
     );     
                 

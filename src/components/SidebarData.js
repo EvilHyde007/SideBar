@@ -12,7 +12,7 @@ export const SidebarData = [
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpen: <RiIcons.RiArrowUpSFill />,
 
-        subNav: [
+        /* subNav: [
             {
                 title: 'Users',
                  path: '/overview/users',
@@ -23,7 +23,7 @@ export const SidebarData = [
                  path: '/overview/revenue',
                 icon: <IoIcons.IoIosPaper />,
             },
-        ]
+        ] */
     },
 
     {
@@ -33,7 +33,7 @@ export const SidebarData = [
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpen: <RiIcons.RiArrowUpSFill />,
 
-        subNav: [
+       /*  subNav: [
             {
                 title: 'Reports',
                  path: '/reports/reports1',
@@ -49,7 +49,7 @@ export const SidebarData = [
                  path: '/reports/reports3',
                 icon: <IoIcons.IoIosPaper />,
             },
-        ]
+        ] */
     },
 
     {
@@ -71,7 +71,7 @@ export const SidebarData = [
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpen: <RiIcons.RiArrowUpSFill />,
 
-        subNav: [
+        /* subNav: [
             {
                 title: 'Message ',
                  path: '/messages/messages1',
@@ -87,7 +87,7 @@ export const SidebarData = [
                  path: '/messages/messages3',
                 icon: <IoIcons.IoIosPaper />,
             },
-        ]
+        ] */
     },
 
     {
